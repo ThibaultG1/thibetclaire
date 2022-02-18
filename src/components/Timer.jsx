@@ -23,6 +23,7 @@ const Timer = ({ endDate }) => {
         opacity: "0.83",
         borderRadius: 2,
         px: 3,
+        mb: 2,
       }}
     >
       <CardContent>
