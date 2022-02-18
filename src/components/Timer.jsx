@@ -26,7 +26,12 @@ const Timer = ({ endDate }) => {
       }}
     >
       <CardContent>
-        <Grid container spacing={{ xs: 2, sm: 4 }} sx={{ textAlign: "center" }}>
+        <Grid
+          container
+          justifyContent="center"
+          spacing={{ xs: 2, sm: 4 }}
+          sx={{ textAlign: "center" }}
+        >
           <TimerItems timeLeft={timeLeft} />
         </Grid>
       </CardContent>

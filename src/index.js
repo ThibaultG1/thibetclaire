@@ -4,7 +4,7 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import Home from "./pages/Home";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import { createTheme, responsiveFontSizes, ThemeProvider } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material";
 
 let theme = createTheme({
   palette: {

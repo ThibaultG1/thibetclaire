@@ -15,6 +15,7 @@ function Home() {
       <Box
         sx={{
           height: "100vh",
+          maxHeight: "130vw",
           background: "url(./img/lavande-photo.jpg) no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "60% 30%",
@@ -26,7 +27,7 @@ function Home() {
           justifyContent="center"
           alignItems="flex-end"
           sx={{
-            height: "inherit",
+            height: "-webkit-fill-available",
             paddingBottom: 2,
           }}
         >
