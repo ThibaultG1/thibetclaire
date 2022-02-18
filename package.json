@@ -1,7 +1,7 @@
 {
   "name": "thibetclaire",
   "version": "0.1.0",
-  "homepage": "https://ThibaultG1.github.io/thibetclaire",
+  "homepage": "https://thibetclaire.com",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.7.1",
