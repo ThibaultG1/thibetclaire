@@ -27,7 +27,7 @@ function Home() {
           justifyContent="center"
           alignItems="flex-end"
           sx={{
-            height: "inherit",
+            height: "100%",
             paddingBottom: 2,
           }}
         >
