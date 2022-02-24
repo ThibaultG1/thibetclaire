@@ -17,9 +17,7 @@ const Header = () => (
     }}
   >
     <Container>
-      <Typography
-        sx={{ fontSize: "calc(30px + 2vw)", pt: 2, fontFamily: "default" }}
-      >
+      <Typography class="love" sx={{ pt: 2, m: 0 }}>
         Claire et Thibault
       </Typography>
     </Container>

@@ -22,7 +22,7 @@ const Timer = ({ endDate }) => {
       sx={{
         opacity: "0.83",
         borderRadius: 2,
-        px: 3,
+        px: { xs: 0, sm: 3 },
         mb: 2,
       }}
     >
@@ -67,10 +67,10 @@ const TimerItems = ({ timeLeft }) => {
 
 const TimerItem = ({ duration, scale }) => (
   <Grid item>
-    <Typography sx={{ fontWeight: "bold", fontSize: 50 }}>
+    <Typography sx={{ fontWeight: "bold", fontSize: "calc(30px + 1vw)" }}>
       {duration}
     </Typography>
-    <Typography sx={{ fontWeight: "bold", fontSize: "calc(10px + 1vw)" }}>
+    <Typography sx={{ fontWeight: "bold", fontSize: "calc(7px + 1vw)" }}>
       {scale}
     </Typography>
   </Grid>
