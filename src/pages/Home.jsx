@@ -56,7 +56,7 @@ function Home() {
               <strong>✨ nous allons nous marier ✨</strong> et nous comptons
               sur vous&nbsp;!
               <br />
-              Un faire-part vous sera addressé prochainement.
+              Un faire-part vous sera adressé prochainement.
               <br />
               Nous mettrons ce site à jour au fur et à mesure de l’avancée des
               préparatifs.
@@ -73,7 +73,7 @@ function Home() {
               C'est bon vous avez retenu ? Dans le doute, à vos agendas&nbsp;!
               <br />
               Si vous êtes super high techs / aventuriers, vous pouvez vous
-              risquer à cliquer sur le bouton et ouvrir l'evènement avec votre
+              risquer à cliquer sur le bouton et ouvrir l'événement avec votre
               calendrier en ligne (Google, Outlook, iCloud, etc.). 😉
             </p>
             <Button
