@@ -40,7 +40,7 @@ function Home() {
         <Card
           variant="outlined"
           sx={{
-            backgroundColor: "#E1F0FF",
+            bgcolor: "primary.light",
             borderRadius: 2,
             px: { xs: 0, sm: 3 },
           }}
@@ -63,8 +63,7 @@ function Home() {
             </p>
           </CardContent>
         </Card>
-        <br />
-        <Grid container spacing={2}>
+        <Grid container gap={2}>
           <Grid item sm>
             <h2>1. Notez la date dans vos agendas ✍️</h2>
             <p>
@@ -72,7 +71,7 @@ function Home() {
               <br />
               C'est bon vous avez retenu ? Dans le doute, à vos agendas&nbsp;!
               <br />
-              Si vous êtes super high techs / aventuriers, vous pouvez vous
+              Si vous êtes super high-tech ou aventuriers, vous pouvez vous
               risquer à cliquer sur le bouton et ouvrir l'événement avec votre
               calendrier en ligne (Google, Outlook, iCloud, etc.). 😉
             </p>

@@ -7,7 +7,6 @@ const Header = () => (
     sx={{
       position: "absolute",
       color: "white",
-      //background: "rgb(51 56 88)",
       textAlign: "center",
       paddingBottom: 3,
       background:

@@ -9,7 +9,8 @@ import { createTheme, ThemeProvider } from "@mui/material";
 let theme = createTheme({
   palette: {
     primary: {
-      main: "#7CBCFD",
+      light: "rgb(225 240 255)",
+      main: "rgb(53, 125, 237)",
     },
   },
 });

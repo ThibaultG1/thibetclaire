@@ -6,10 +6,10 @@ const Footer = () => {
   return (
     <Box
       sx={{
-        background: "#E1F0FF",
         textAlign: "center",
-        fontSize: 10,
-        color: "#7CBCFD",
+        fontSize: 14,
+        bgcolor: "primary.light",
+        color: "primary.main",
         py: 1,
       }}
     >
@@ -22,9 +22,8 @@ const Footer = () => {
           >
             <strong>Contact</strong>
           </Link>
-          <br />
-          Copyright {year}, Made with 💗 by Thibault
         </p>
+        <p>Copyright {year}, Made with 💗 by Thibault</p>
       </Container>
     </Box>
   );
