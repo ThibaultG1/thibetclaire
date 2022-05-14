@@ -1,6 +1,6 @@
-import { Typography } from "@mui/material";
 import Container from "@mui/material/Container";
 import { Box } from "@mui/system";
+import "./Header.css";
 
 const Header = () => (
   <Box
@@ -16,9 +16,9 @@ const Header = () => (
     }}
   >
     <Container>
-      <Typography class="love" sx={{ pt: 2, m: 0 }}>
+      <p className="love" sx={{ pt: 2, m: 0 }}>
         Claire et Thibault
-      </Typography>
+      </p>
     </Container>
   </Box>
 );

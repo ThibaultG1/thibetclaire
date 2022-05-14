@@ -1,0 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+
+.love {
+  font-family: "Dancing Script", "Segoe UI", cursive;
+  font-size: calc(30px + 2vw);
+  margin: 16px 0;
+}

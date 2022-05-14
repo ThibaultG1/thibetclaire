@@ -1,16 +1,37 @@
-import React from "react";
-import { Button, Card, CardContent, Container, Grid } from "@mui/material";
+import { Button, ButtonGroup, Container, Grid } from "@mui/material";
 import { Box } from "@mui/system";
-import InsertInvitationIcon from "@mui/icons-material/InsertInvitation";
-import ContactPageIcon from "@mui/icons-material/ContactPage";
-
-import Header from "../components/Header";
-import "./Home.css";
-import Timer from "../components/Timer";
-import FileSaver from "file-saver";
+import React, { useEffect, useRef, useState } from "react";
+import { createSearchParams, useSearchParams } from "react-router-dom";
+import Accomodation from "../components/Accomodation";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
+import SaveTheDate from "../components/SaveTheDate";
+import Timer from "../components/Timer";
+import WelcomeOnboard from "../components/WelcomeOnboard";
+import "./Home.css";
 
 function Home() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [hasReceivedInvitation, setHasReceivedInvitation] = useState(
+    searchParams.get("r")
+  );
+  const isFirstMount = useRef(true);
+  const underBanner = useRef(null);
+
+  const setR = (value) => {
+    setHasReceivedInvitation(value);
+    setSearchParams(createSearchParams({ r: value }));
+  };
+
+  useEffect(() => {
+    if (isFirstMount.current) {
+      isFirstMount.current = false;
+    } else {
+      underBanner.current.scrollIntoView({ behavior: "smooth" });
+    }
+    return isFirstMount.current;
+  }, [hasReceivedInvitation]);
+
   return (
     <>
       <Header />
@@ -33,85 +54,47 @@ function Home() {
             paddingBottom: 2,
           }}
         >
-          <Timer endDate="2022-08-20T14:00:00+01:00" />
+          <Timer endDate="2022-08-20T13:30:00+01:00" />
         </Grid>
       </Box>
-      <Container sx={{ textAlign: "center", my: 3 }}>
-        <Card
-          variant="outlined"
-          sx={{
-            bgcolor: "primary.light",
-            borderRadius: 2,
-            px: { xs: 0, sm: 3 },
-          }}
-        >
-          <CardContent>
-            <h1>
-              Save the date&nbsp;! 🥳
-              <br />
-              Samedi 20 août 2022 en&nbsp;Vendée
-            </h1>
-            <p>
-              Vous l’avez compris,{" "}
-              <strong>✨ nous allons nous marier ✨</strong> et nous comptons
-              sur vous&nbsp;!
-              <br />
-              Un faire-part vous sera adressé prochainement.
-              <br />
-              Nous mettrons ce site à jour au fur et à mesure de l’avancée des
-              préparatifs.
-            </p>
-          </CardContent>
-        </Card>
-        <Grid container gap={2}>
-          <Grid item sm>
-            <h2>1. Notez la date dans vos agendas ✍️</h2>
-            <p>
-              20 août 2022, 20 août 2022, 20 août 2022.
-              <br />
-              C'est bon vous avez retenu ? Dans le doute, à vos agendas&nbsp;!
-              <br />
-              Si vous êtes super high-tech ou aventuriers, vous pouvez vous
-              risquer à cliquer sur le bouton et ouvrir l'événement avec votre
-              calendrier en ligne (Google, Outlook, iCloud, etc.). 😉
-            </p>
-            <Button
-              variant="contained"
-              size="large"
-              startIcon={<InsertInvitationIcon />}
-              onClick={() => {
-                FileSaver.saveAs(
-                  "./mariage-thibetclaire.ics",
-                  "mariage-thibetclaire.ics"
-                );
-              }}
-            >
-              AJOUTER AU CALENDRIER
-            </Button>
-          </Grid>
-          <Grid item sm>
-            <h2>2. Envoyez-nous vos coordonnées 🎯</h2>
-            <p>
-              Grâce à un formulaire simple et sécurisé, vous allez nous aider
-              grandement en prévision de l'envoi des faire-part et pour
-              faciliter l'organisation&nbsp;! ✉️
-            </p>
-            <Button
-              variant="contained"
-              size="large"
-              startIcon={<ContactPageIcon />}
-              onClick={() =>
-                window.open(
-                  "https://framaforms.org/mariage-de-claire-et-thibault-1645703062",
-                  "_self"
-                )
-              }
-            >
-              ENVOYER SES COORDONNÉES
-            </Button>
-          </Grid>
-        </Grid>
-      </Container>
+      <div ref={underBanner}></div>
+      {!["0", "1"].includes(hasReceivedInvitation) ? (
+        <Container sx={{ textAlign: "center", my: 3 }}>
+          <h1>Avez-vous reçu un faire-part&nbsp;?</h1>
+          <ButtonGroup
+            variant="contained"
+            size="large"
+            aria-label="large button group"
+            sx={{ mb: 2 }}
+          >
+            <Button onClick={() => setR("1")}>OUI</Button>
+            <Button onClick={() => setR("0")}>NON</Button>
+          </ButtonGroup>
+        </Container>
+      ) : (
+        <>
+          {hasReceivedInvitation === "0" && <SaveTheDate />}
+          {hasReceivedInvitation === "1" && <WelcomeOnboard />}
+          <Accomodation />
+          <Container sx={{ textAlign: "center" }}>
+            {hasReceivedInvitation === "0" ? (
+              <p>
+                Vous avez déjà reçu un faire-part ?{" "}
+                <Button variant="text" onClick={() => setR("1")}>
+                  Cliquez ici
+                </Button>
+              </p>
+            ) : (
+              <p>
+                Vous n'avez pas reçu de faire-part ?{" "}
+                <Button variant="text" onClick={() => setR("0")}>
+                  Cliquez ici
+                </Button>
+              </p>
+            )}
+          </Container>
+        </>
+      )}
       <Footer />
     </>
   );
