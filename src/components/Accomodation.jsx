@@ -34,8 +34,8 @@ const Accomodation = () => {
           expandedItem={expanded}
           onChangeCallback={handleChange}
         >
-          <ChipInfo type="car" info="5" />
-          <ChipInfo type="walk" info="15" />
+          <ChipInfo type="car" info="4" />
+          <ChipInfo type="walk" info="22" />
           <p>
             85200 MERVENT
             <br />
@@ -53,6 +53,7 @@ const Accomodation = () => {
           expandedItem={expanded}
           onChangeCallback={handleChange}
         >
+          <ChipInfo type="car" info="6" />
           <p>
             85200 MERVENT
             <br />
@@ -60,9 +61,9 @@ const Accomodation = () => {
             <br />
             Merci de privilégier la réservation par téléphone ou email.
           </p>
+          <WebsiteButton link="http://camping-jamoniere.com" />
           <PhoneButton num="02 51 00 26 29" />
           <EmailButton email="contact@camping-jamoniere.com" />
-          <WebsiteButton link="http://camping-jamoniere.com" />
           <MapsButton link="https://goo.gl/maps/PM4ufXf1mKqwb2KW8" />
         </Collapsible>
         <Collapsible
@@ -82,9 +83,128 @@ const Accomodation = () => {
             Il n'y a pas de sanitaire.
             <br />
             C'est assez grand, il y aura de la place pour tous!
+            <br />
+            Merci de contacter Claire si vous souhaiter en bénéficier.
           </p>
+          <PhoneButton num="06 29 34 69 09" />
           <MapsButton link="https://goo.gl/maps/tDx8p2mEstZzMDHFA" />
         </Collapsible>
+        <Collapsible
+          title="Camping de la grande perrure, Mervent"
+          overview="Camping à la ferme : arriver avec sa tente"
+          id="4"
+          expandedItem={expanded}
+          onChangeCallback={handleChange}
+        >
+          <ChipInfo type="car" info="6" />
+          <p>85200 MERVENT</p>
+          <WebsiteButton link="https://facebook.com/campingperrure" />
+          <PhoneButton num="06 75 14 13 08" />
+          <EmailButton email="campingperrure85@gmail.com" />
+          <MapsButton link="https://goo.gl/maps/MBziFsQPd5UDmDyJA" />
+        </Collapsible>
+        <Collapsible
+          title="Camping La Joletiere"
+          overview="Camping 3 étoiles avec piscine"
+          id="5"
+          expandedItem={expanded}
+          onChangeCallback={handleChange}
+        >
+          <ChipInfo type="car" info="2" />
+          <ChipInfo type="walk" info="12" />
+          <p>85200 MERVENT</p>
+          <WebsiteButton link="https://www.campinglajoletiere.fr" />
+          <PhoneButton num="02 51 00 26 87" />
+          <EmailButton email="camping.la.joletiere@wanadoo.fr" />
+          <MapsButton link="https://g.page/camping-la-joletiere?share" />
+        </Collapsible>
+        <Collapsible
+          title="Auberge de la forêt"
+          overview="Auberge simple et au calme dans la nature"
+          id="6"
+          expandedItem={expanded}
+          onChangeCallback={handleChange}
+        >
+          <ChipInfo type="car" info="5" />
+          <ChipInfo type="walk" info="32" />
+          <p>Lieu dit "les Essarts", 85200 Mervent</p>
+          <PhoneButton num="02 53 72 93 11" />
+          <PhoneButton num="06 34 95 10 59" />
+          <MapsButton link="https://goo.gl/maps/cdzX8J5EeGbabXgr6" />
+        </Collapsible>
+        <Collapsible
+          title="L’Auberge de Maitre Pannetier, Vouvant"
+          overview="4 chambres d’hôtes dont 1 chambre pour 4 à 120€, 1 chambre pour 3  à 78/87€"
+          id="7"
+          expandedItem={expanded}
+          onChangeCallback={handleChange}
+        >
+          <ChipInfo type="car" info="13" />
+          <p>8 Place du Corps de Garde, 85120 VOUVANT</p>
+          <WebsiteButton link="https://www.maitrepannetier.com" />
+          <PhoneButton num="02 51 00 80 12" />
+          <EmailButton email="aubergedemaitrepannetier@gmail.com" />
+          <MapsButton link="https://goo.gl/maps/c1TkNM14m5fqwuqd8" />
+        </Collapsible>
+        <Collapsible
+          title="Les chambres de la Porte aux Moines, Vouvant"
+          overview="2 chambres de 70€/nuit pour 2"
+          id="8"
+          expandedItem={expanded}
+          onChangeCallback={handleChange}
+        >
+          <ChipInfo type="car" info="13" />
+          <p>7 Rue de la Porte aux Moines, 85120 Vouvant</p>
+          <p>Marie-Line & Jean-Louis METAY</p>
+          <WebsiteButton link="https://www.laporteauxmoines.com" />
+          <PhoneButton num="02 53 72 01 37" />
+          <MapsButton link="https://goo.gl/maps/Aqm51teJKDWs54gn6" />
+        </Collapsible>
+        {/* <Collapsible
+          title=""
+          overview=""
+          id="9"
+          expandedItem={expanded}
+          onChangeCallback={handleChange}
+        >
+          <ChipInfo type="car" info="" />
+          <ChipInfo type="walk" info="" />
+          <p></p>
+          <WebsiteButton link="" />
+          <PhoneButton num="" />
+          <EmailButton email="" />
+          <MapsButton link="" />
+        </Collapsible>
+        <Collapsible
+          title=""
+          overview=""
+          id="10"
+          expandedItem={expanded}
+          onChangeCallback={handleChange}
+        >
+          <ChipInfo type="car" info="" />
+          <ChipInfo type="walk" info="" />
+          <p></p>
+          <WebsiteButton link="" />
+          <PhoneButton num="" />
+          <EmailButton email="" />
+          <MapsButton link="" />
+        </Collapsible>
+        <Collapsible
+          title=""
+          overview=""
+          id="11"
+          expandedItem={expanded}
+          onChangeCallback={handleChange}
+        >
+          <ChipInfo type="car" info="" />
+          <ChipInfo type="walk" info="" />
+          <p></p>
+          <WebsiteButton link="" />
+          <PhoneButton num="" />
+          <EmailButton email="" />
+          <MapsButton link="" />
+        </Collapsible> */}
       </Box>
       <p>
         <strong>
