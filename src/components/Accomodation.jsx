@@ -160,51 +160,65 @@ const Accomodation = () => {
           <PhoneButton num="02 53 72 01 37" />
           <MapsButton link="https://goo.gl/maps/Aqm51teJKDWs54gn6" />
         </Collapsible>
-        {/* <Collapsible
-          title=""
-          overview=""
+        <Collapsible
+          title="Relais de la Grande Rue, Vouvant"
+          overview="Location 3 nuits minimum, 4-6 pers (2 chambres + clic clac),  210€ en tout"
           id="9"
           expandedItem={expanded}
           onChangeCallback={handleChange}
         >
-          <ChipInfo type="car" info="" />
-          <ChipInfo type="walk" info="" />
-          <p></p>
-          <WebsiteButton link="" />
-          <PhoneButton num="" />
-          <EmailButton email="" />
-          <MapsButton link="" />
+          <ChipInfo type="car" info="12" />
+          <p>26 Grande Rue, 85120 Vouvant</p>
+          <WebsiteButton link="https://www.lerelaisdelagranderue.fr" />
+          <PhoneButton num="02 44 57 55 53" />
+          <EmailButton email="contact@lerelaisdelagranderue.fr" />
+          <MapsButton link="https://goo.gl/maps/6nwWcUZ7mvZpqhHq5" />
         </Collapsible>
         <Collapsible
-          title=""
-          overview=""
+          title="Hotel le Rabelais, Fontenay-le-Comte"
+          overview="À partir de 99€/nuit"
           id="10"
           expandedItem={expanded}
           onChangeCallback={handleChange}
         >
-          <ChipInfo type="car" info="" />
-          <ChipInfo type="walk" info="" />
-          <p></p>
-          <WebsiteButton link="" />
-          <PhoneButton num="" />
-          <EmailButton email="" />
-          <MapsButton link="" />
+          <ChipInfo type="car" info="13" />
+          <p>19 rue de l'Ouillette, 85200 FONTENAY-LE-COMTE</p>
+          <WebsiteButton link="http://www.le-rabelais.com" />
+          <PhoneButton num="02 51 69 86 20" />
+          <EmailButton email="accueil@le-rabelais.com" />
+          <MapsButton link="https://g.page/HotelLeRabelais?share" />
         </Collapsible>
         <Collapsible
-          title=""
-          overview=""
+          title="Hôtel Le Fontarabie, Fontenay-le-Comte"
+          overview="À partir de 89€/nuit"
           id="11"
           expandedItem={expanded}
           onChangeCallback={handleChange}
         >
-          <ChipInfo type="car" info="" />
-          <ChipInfo type="walk" info="" />
-          <p></p>
-          <WebsiteButton link="" />
-          <PhoneButton num="" />
-          <EmailButton email="" />
-          <MapsButton link="" />
-        </Collapsible> */}
+          <ChipInfo type="car" info="14" />
+          <p>57 Rue de la République, 85200 Fontenay-le-Comte</p>
+          <WebsiteButton link="https://www.hotel-fontarabie.com" />
+          <PhoneButton num="02 51 69 17 24" />
+          <MapsButton link="https://goo.gl/maps/ih1FkFyTXCBHYegn6" />
+        </Collapsible>
+        <Collapsible
+          title="Parfum Du Sud, CHAMBRE 'NEPTUNE'"
+          overview="65€ Maison du 17ème siècle, entièrement rénovée, au coeur de la ville Renaissance."
+          id="12"
+          expandedItem={expanded}
+          onChangeCallback={handleChange}
+        >
+          <ChipInfo type="car" info="12" />
+          <p>
+            4 Rue Benjamin Fillon, 85200 Fontenay-le-Comte
+            <br />
+            Chambre au RDC
+          </p>
+          <WebsiteButton link="https://parfum-du-sud.business.site" />
+          <PhoneButton num="02 51 69 85 75" />
+          <PhoneButton num="06 09 38 13 10" />
+          <MapsButton link="https://g.page/parfum-du-sud?share" />
+        </Collapsible>
       </Box>
       <p>
         <strong>
