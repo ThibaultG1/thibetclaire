@@ -1,5 +1,6 @@
 import { Box, Link } from "@mui/material";
 import Container from "@mui/material/Container";
+import ExternalLink from "./ExternalLink";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -15,13 +16,9 @@ const Footer = () => {
     >
       <Container>
         <p>
-          <Link
-            href="https://framaforms.org/users/thibault-et-claire/contact"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <ExternalLink link="https://framaforms.org/users/thibault-et-claire/contact">
             <strong>Contact</strong>
-          </Link>
+          </ExternalLink>
         </p>
         <p>Copyright {year}, Made with 💗 by Thibault</p>
       </Container>

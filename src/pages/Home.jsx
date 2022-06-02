@@ -1,4 +1,4 @@
-import { Button, ButtonGroup, Container, Grid } from "@mui/material";
+import { Button, ButtonGroup, Container, Divider, Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useEffect, useRef, useState } from "react";
 import { createSearchParams, useSearchParams } from "react-router-dom";
@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SaveTheDate from "../components/SaveTheDate";
 import Timer from "../components/Timer";
+import TouristAttractions from "../components/TouristAttractions";
 import WelcomeOnboard from "../components/WelcomeOnboard";
 import "./Home.css";
 
@@ -60,7 +61,7 @@ function Home() {
       <div ref={underBanner}></div>
       {!["0", "1"].includes(hasReceivedInvitation) ? (
         <Container sx={{ textAlign: "center", my: 3 }}>
-          <h1>Avez-vous reçu un faire-part&nbsp;?</h1>
+          <h1>Avez-vous reçu un faire&#8209;part&nbsp;?</h1>
           <ButtonGroup
             variant="contained"
             size="large"
@@ -76,6 +77,8 @@ function Home() {
           {hasReceivedInvitation === "0" && <SaveTheDate />}
           {hasReceivedInvitation === "1" && <WelcomeOnboard />}
           <Accomodation />
+          <TouristAttractions />
+          <Divider />
           <Container sx={{ textAlign: "center" }}>
             {hasReceivedInvitation === "0" ? (
               <p>

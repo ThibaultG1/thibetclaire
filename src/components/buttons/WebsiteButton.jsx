@@ -12,6 +12,9 @@ const WebsiteButton = ({ link }) => (
   </Button>
 );
 
-const cleanDisplayedLink = (link) => link.replace(/^https?:\/\/(www.)?/, "");
+const cleanDisplayedLink = (link) => {
+  const cleaned = link.replace(/^https?:\/\/(www.)?/, "");
+  return cleaned.length < 40 ? cleaned : cleaned.substr(0, 36) + "...";
+};
 
 export default WebsiteButton;

@@ -1,4 +1,4 @@
-import { Box, Container } from "@mui/material";
+import { Alert, AlertTitle, Box, Container } from "@mui/material";
 import React, { useState } from "react";
 import EmailButton from "./buttons/EmailButton";
 import MapsButton from "./buttons/MapsButton";
@@ -80,7 +80,8 @@ const Accomodation = () => {
             Le terrain est généreusement prêté par Myriam Normand, cousine de
             Claire.
             <br />
-            Il n'y a pas de sanitaire.
+            Il n'y a pas de sanitaire sur le terrain mais nous avons accès à des
+            toilettes à proximité.
             <br />
             C'est assez grand, il y aura de la place pour tous!
             <br />
@@ -219,12 +220,146 @@ const Accomodation = () => {
           <PhoneButton num="06 09 38 13 10" />
           <MapsButton link="https://g.page/parfum-du-sud?share" />
         </Collapsible>
+        <Collapsible
+          title="Chambres d'hôtes 'Le Pré Sec'"
+          overview="Chambre avec 1 lit 120 et 1 lit 140"
+          id="13"
+          expandedItem={expanded}
+          onChangeCallback={handleChange}
+        >
+          <ChipInfo type="car" info="17" />
+          <p>90 Rte de Sainte-Hermine, 85570 Pouillé</p>
+          <WebsiteButton link="http://www.lepresec.com" />
+          <PhoneButton num="02 51 37 87 87" />
+          <PhoneButton num="06 88 34 73 89" />
+          <MapsButton link="https://goo.gl/maps/YXMZmF3ZqdJ1ebYw7" />
+        </Collapsible>
+        <Collapsible
+          title="Chambres d'hôtes 'La Maison Neuve' "
+          overview="40€, 2 chambres, jolie maison"
+          id="14"
+          expandedItem={expanded}
+          onChangeCallback={handleChange}
+        >
+          <ChipInfo type="car" info="18" />
+          <p>
+            96 Chem. du Puits de la Charrière, 85570 Pouille
+            <br />
+            Chez Mr et Mme HERBRETEAU
+          </p>
+          <WebsiteButton link="https://www.vendee-tourisme.com/chambres-dhotes-en-vendee/chambres-dhotes-la-maison-neuve/pouille/hlopdl049v5057oc" />
+          <PhoneButton num="02 51 00 14 86" />
+          <PhoneButton num="06 88 90 90 82" />
+          <MapsButton link="https://goo.gl/maps/KRU1okmomuRPb5da6" />
+        </Collapsible>
+        <Collapsible
+          title="Les Eleis Hotel & Restaurant, Saint-Martin-de-Fraigneau"
+          overview="À partir de 70€"
+          id="15"
+          expandedItem={expanded}
+          onChangeCallback={handleChange}
+        >
+          <ChipInfo type="car" info="18" />
+          <p>58 Av. de la ville, 85200 Saint-Martin-de-Fraigneau</p>
+          <WebsiteButton link="https://hotel-fontenay-le-comte.com" />
+          <PhoneButton num="02 51 53 03 30" />
+          <MapsButton link="https://goo.gl/maps/Medm3Ppt79rNCk9c8" />
+        </Collapsible>
+        <Collapsible
+          title="Chambres d'hôtes 'La rivière Morin'"
+          overview="73€"
+          id="16"
+          expandedItem={expanded}
+          onChangeCallback={handleChange}
+        >
+          <ChipInfo type="car" info="19" />
+          <p>La Rivière Maurin, 85410 La Caillère-Saint-Hilaire </p>
+          <WebsiteButton link="http://www.booking.com/Share-FsFCgv" />
+          <PhoneButton num="02 51 69 85 77" />
+          <PhoneButton num="06 25 97 90 09" />
+          <MapsButton link="https://goo.gl/maps/nnryddMrujQvHfD27" />
+        </Collapsible>
+        <Collapsible
+          title="Chambres d'hôtes 'La Tour des Laudes'"
+          overview="Logis avec tour"
+          id="17"
+          expandedItem={expanded}
+          onChangeCallback={handleChange}
+        >
+          <ChipInfo type="car" info="22" />
+          <p>14 Rue de la Tour, 85120 Breuil-Barret</p>
+          <WebsiteButton link="https://www.latourdeslaudes.fr" />
+          <PhoneButton num="06 06 49 82 46" />
+          <PhoneButton num="06 23 48 06 09" />
+          <MapsButton link="https://g.page/la-tour-des-laudes?share" />
+        </Collapsible>
+        <Collapsible
+          title="Chambres d'hôtes 'Le Rosier Sauvage'"
+          overview="50€, 4 chambres"
+          id="18"
+          expandedItem={expanded}
+          onChangeCallback={handleChange}
+        >
+          <ChipInfo type="car" info="23" />
+          <p>1 Rue de l'Abbaye, 85240 Rives-d'Autise</p>
+          <WebsiteButton link="http://lerosiersauvage.fr" />
+          <PhoneButton num="02 51 37 87 87" />
+          <MapsButton link="https://goo.gl/maps/Jrbj1fkQWzZ851my7" />
+        </Collapsible>
+        <Collapsible
+          title="Chambres d'hôtes 'Villanelle', L'Île-d'Elle"
+          overview="À partir de 55€, 3 chambres, joli cadre"
+          id="19"
+          expandedItem={expanded}
+          onChangeCallback={handleChange}
+        >
+          <ChipInfo type="car" info="32" />
+          <p>3 Av. de la Gare, 85770 L'Île-d'Elle</p>
+          <WebsiteButton link="http://www.chambres-villanelle.com" />
+          <PhoneButton num="02 44 57 50 47" />
+          <PhoneButton num="06 45 88 51 59" />
+          <MapsButton link="https://goo.gl/maps/zVo9FADpLmbzFMUD9" />
+        </Collapsible>
+        <Collapsible
+          title="Le Logis de Bouillé"
+          overview="56€, jolie maison, mobilier simple"
+          id="20"
+          expandedItem={expanded}
+          onChangeCallback={handleChange}
+        >
+          <ChipInfo type="car" info="24" />
+          <p>
+            10 Rue du Plessis, 85420 Bouillé-Courdault
+            <br />
+            Vérifier largeur du lit
+          </p>
+          <WebsiteButton link="http://lelogisdebouille.fr" />
+          <PhoneButton num="02 51 52 41 79" />
+          <EmailButton email="nanyolande@gmail.com" />
+          <MapsButton link="https://goo.gl/maps/3DTjhCRBUiYXkyYEA" />
+        </Collapsible>
+        <Collapsible
+          title="La Ferme du Marais Poitevin"
+          overview="À partir de 70€"
+          id="21"
+          expandedItem={expanded}
+          onChangeCallback={handleChange}
+        >
+          <ChipInfo type="car" info="32" />
+          <p>19 Rue du Port Grenouillet, 85490 Benet</p>
+          <WebsiteButton link="http://lafermedumaraispoitevin.fr" />
+          <PhoneButton num="02 51 52 98 38" />
+          <PhoneButton num="06 80 68 38 78" />
+          <MapsButton link="https://g.page/fermedumaraispoitevin?share" />
+        </Collapsible>
       </Box>
       <p>
-        <strong>
-          Nous actualisons ces jours-ci le site. Très prochainement d'autres
-          hébergements seront listés. Merci de votre patience ! 🙂
-        </strong>
+        <Alert severity="info" sx={{ textAlign: "left" }}>
+          <AlertTitle>Dernière mise à jour le 02/06/2022.</AlertTitle>
+          N'hésitez pas à nous indiquer si vous constatez des erreurs, si
+          certains logements ne sont plus disponibles ou si avez d'autres pistes
+          à proposer ! 🙂
+        </Alert>
       </p>
     </Container>
   );
