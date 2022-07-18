@@ -3,7 +3,7 @@ import React from "react";
 import ExternalLink from "./ExternalLink";
 
 const TouristAttractions = () => (
-  <Container sx={{ textAlign: "center", my: 3 }}>
+  <Container sx={{ textAlign: "center", my: 3 }} id="sites-touristiques">
     <h2>Sites touristiques</h2>
     <p>
       De nombreuses activités et visites peuvent être réalisées à proximité du

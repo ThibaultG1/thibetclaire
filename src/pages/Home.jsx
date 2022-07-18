@@ -2,12 +2,15 @@ import { Button, ButtonGroup, Container, Divider, Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useEffect, useRef, useState } from "react";
 import { createSearchParams, useSearchParams } from "react-router-dom";
+
 import Accomodation from "../components/Accomodation";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SaveTheDate from "../components/SaveTheDate";
+import TableOfContents from "../components/TableOfContents";
 import Timer from "../components/Timer";
 import TouristAttractions from "../components/TouristAttractions";
+import WeddingList from "../components/WeddingList";
 import WelcomeOnboard from "../components/WelcomeOnboard";
 import "./Home.css";
 
@@ -76,8 +79,10 @@ function Home() {
         <>
           {hasReceivedInvitation === "0" && <SaveTheDate />}
           {hasReceivedInvitation === "1" && <WelcomeOnboard />}
+          <TableOfContents />
           <Accomodation />
           <TouristAttractions />
+          <WeddingList />
           <Divider />
           <Container sx={{ textAlign: "center" }}>
             {hasReceivedInvitation === "0" ? (

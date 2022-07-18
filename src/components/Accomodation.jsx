@@ -15,7 +15,7 @@ const Accomodation = () => {
   };
 
   return (
-    <Container sx={{ textAlign: "center", my: 3 }}>
+    <Container sx={{ textAlign: "center", my: 3 }} id="hebergement">
       <h2>Hébergement</h2>
       <p>
         Nous avons rassemblé différentes options d'hébergement à proximité des
