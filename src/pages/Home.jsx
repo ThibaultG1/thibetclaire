@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { createSearchParams, useSearchParams } from "react-router-dom";
 
 import Accomodation from "../components/Accomodation";
+import AnswerOnline from "../components/AnswerOnline";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SaveTheDate from "../components/SaveTheDate";
@@ -17,7 +18,7 @@ import "./Home.css";
 function Home() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [hasReceivedInvitation, setHasReceivedInvitation] = useState(
-    searchParams.get("r")
+    searchParams.get("r") == null ? "1" : searchParams.get("r")
   );
   const isFirstMount = useRef(true);
   const underBanner = useRef(null);
@@ -58,7 +59,7 @@ function Home() {
             paddingBottom: 2,
           }}
         >
-          <Timer endDate="2022-08-20T13:30:00+01:00" />
+          <Timer endDate="2022-08-20T13:30:00+02:00" />
         </Grid>
       </Box>
       <div ref={underBanner}></div>
@@ -83,6 +84,7 @@ function Home() {
           <Accomodation />
           <TouristAttractions />
           <WeddingList />
+          {hasReceivedInvitation === "1" && <AnswerOnline />}
           <Divider />
           <Container sx={{ textAlign: "center" }}>
             {hasReceivedInvitation === "0" ? (

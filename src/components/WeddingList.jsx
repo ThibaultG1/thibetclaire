@@ -9,8 +9,7 @@ const WeddingList = () => (
       Plusieurs d'entre vous nous ont demandé une liste de mariage. On a donc
       pris le temps de rassembler quelques idées de cadeaux.
       <br />
-      Pour les cadeaux les plus onéreux, vous pouvez aussi participer via la
-      cagnotte en précisant dans le message pour quel cadeau vous contribuez.
+      Pour les cadeaux les plus onéreux, vous pouvez aussi offrir une participation.
       <br />
       Si vous ne trouvez pas votre bonheur dans cette liste, ne vous inquiétez
       pas, le plus beau des cadeaux c'est votre présence avec nous pour notre

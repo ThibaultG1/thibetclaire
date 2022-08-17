@@ -30,6 +30,11 @@ const TableOfContents = () => (
             Liste de mariage
           </HashLink>
         </p>
+        <p>
+          <HashLink smooth to="#repondre-invitation">
+            Répondre à l'invitation
+          </HashLink>
+        </p>
       </CardContent>
     </Card>
   </Container>

@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { Card, CardContent, Grid, Typography } from "@mui/material";
 import dayjs from "dayjs";
 import duration from "dayjs/plugin/duration";
+import { Box } from "@mui/system";
+import WebsiteButton from "./buttons/WebsiteButton";
 dayjs.extend(duration);
 
 const Timer = ({ endDate }) => {
@@ -42,14 +44,8 @@ const Timer = ({ endDate }) => {
 
 const TimerItems = ({ timeLeft }) => {
   const timerItems = [];
-  if (typeof timeLeft === "string") {
-    timerItems.push(
-      <Grid item>
-        <Typography sx={{ fontWeight: "bold", fontSize: 40 }}>
-          {timeLeft}
-        </Typography>
-      </Grid>
-    );
+  if (!timeLeft.hasOwnProperty("MOIS")) {
+    timerItems.push(<Grid item>{timeLeft}</Grid>);
   } else {
     Object.keys(timeLeft).forEach((interval) => {
       timerItems.push(
@@ -93,13 +89,29 @@ const calculateTimeLeft = (endDate) => {
     };
   } else {
     if (timeBetween.asDays() > -1) {
-      timeLeft = "C'est le jour J !";
+      timeLeft = dDay;
     } else {
-      timeLeft = "Merci d'être venus !";
+      timeLeft = after;
     }
   }
 
   return timeLeft;
 };
+
+const dDay = (
+  <Box>
+    <Typography sx={{ fontWeight: "bold", fontSize: 40 }}>
+      C'est le Jour J ! 😍
+    </Typography>
+    <h2>Suivez le mariage à distance :</h2>
+    <WebsiteButton link="https://www.facebook.com/groups/718487236141164" />
+  </Box>
+);
+
+const after = (
+  <Typography sx={{ fontWeight: "bold", fontSize: 40 }}>
+    Merci d'être venus ! 🥰
+  </Typography>
+);
 
 export default Timer;
