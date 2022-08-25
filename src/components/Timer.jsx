@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-import { Card, CardContent, Grid, Typography } from "@mui/material";
+import { Button, Card, CardContent, Grid, Typography } from "@mui/material";
 import dayjs from "dayjs";
 import duration from "dayjs/plugin/duration";
 import { Box } from "@mui/system";
 import WebsiteButton from "./buttons/WebsiteButton";
+import AddAPhotoIcon from "@mui/icons-material/AddAPhoto";
 dayjs.extend(duration);
 
 const Timer = ({ endDate }) => {
@@ -109,9 +110,24 @@ const dDay = (
 );
 
 const after = (
-  <Typography sx={{ fontWeight: "bold", fontSize: 40 }}>
-    Merci d'être venus ! 🥰
-  </Typography>
+  <Box>
+    <Typography sx={{ fontWeight: "bold", fontSize: 35 }}>
+      Merci d'être venus ! 🥰
+    </Typography>
+    <Typography sx={{ fontSize: 20, marginBottom: 2 }}>
+      Partagez-nous vos photos ici pour revivre cette journée inoubliable :
+    </Typography>
+    <Button
+      variant="contained"
+      size="large"
+      startIcon={<AddAPhotoIcon />}
+      onClick={() =>
+        window.open("https://thibetclaire.transfernow.net/fr/push", "_self")
+      }
+    >
+      ENVOYEZ DES PHOTOS
+    </Button>
+  </Box>
 );
 
 export default Timer;
