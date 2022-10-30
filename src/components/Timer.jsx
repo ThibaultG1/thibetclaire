@@ -114,7 +114,7 @@ const after = (
     <Typography sx={{ fontWeight: "bold", fontSize: 35 }}>
       Merci d'être venus ! 🥰
     </Typography>
-    <Typography sx={{ fontSize: 20, marginBottom: 2 }}>
+    {/* <Typography sx={{ fontSize: 20, marginBottom: 2 }}>
       Partagez-nous vos photos ici pour revivre cette journée inoubliable :
     </Typography>
     <Button
@@ -126,7 +126,7 @@ const after = (
       }
     >
       ENVOYEZ DES PHOTOS
-    </Button>
+    </Button> */}
   </Box>
 );
 

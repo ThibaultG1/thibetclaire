@@ -3,16 +3,9 @@ import { Box } from "@mui/system";
 import React, { useEffect, useRef, useState } from "react";
 import { createSearchParams, useSearchParams } from "react-router-dom";
 
-import Accomodation from "../components/Accomodation";
-import AnswerOnline from "../components/AnswerOnline";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import SaveTheDate from "../components/SaveTheDate";
-import TableOfContents from "../components/TableOfContents";
 import Timer from "../components/Timer";
-import TouristAttractions from "../components/TouristAttractions";
-import WeddingList from "../components/WeddingList";
-import WelcomeOnboard from "../components/WelcomeOnboard";
 import "./Home.css";
 
 function Home() {
@@ -62,49 +55,6 @@ function Home() {
           <Timer endDate="2022-08-20T13:30:00+02:00" />
         </Grid>
       </Box>
-      <div ref={underBanner}></div>
-      {!["0", "1"].includes(hasReceivedInvitation) ? (
-        <Container sx={{ textAlign: "center", my: 3 }}>
-          <h1>Avez-vous reçu un faire&#8209;part&nbsp;?</h1>
-          <ButtonGroup
-            variant="contained"
-            size="large"
-            aria-label="large button group"
-            sx={{ mb: 2 }}
-          >
-            <Button onClick={() => setR("1")}>OUI</Button>
-            <Button onClick={() => setR("0")}>NON</Button>
-          </ButtonGroup>
-        </Container>
-      ) : (
-        <>
-          {hasReceivedInvitation === "0" && <SaveTheDate />}
-          {hasReceivedInvitation === "1" && <WelcomeOnboard />}
-          <TableOfContents />
-          <Accomodation />
-          <TouristAttractions />
-          <WeddingList />
-          {hasReceivedInvitation === "1" && <AnswerOnline />}
-          <Divider />
-          <Container sx={{ textAlign: "center" }}>
-            {hasReceivedInvitation === "0" ? (
-              <p>
-                Vous avez déjà reçu un faire-part ?{" "}
-                <Button variant="text" onClick={() => setR("1")}>
-                  Cliquez ici
-                </Button>
-              </p>
-            ) : (
-              <p>
-                Vous n'avez pas reçu de faire-part ?{" "}
-                <Button variant="text" onClick={() => setR("0")}>
-                  Cliquez ici
-                </Button>
-              </p>
-            )}
-          </Container>
-        </>
-      )}
       <Footer />
     </>
   );
